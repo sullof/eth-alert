@@ -17,7 +17,7 @@ let ticker = function(err, response, data) {
 	if (data.price <= program.floor) {
 	slack(`ETH:$${data.price}\nRecommendation: Buy`);
 	} else if (data.price >= program.ceiling) {
-	slack(`ETH:$${data.price}\nRecommendation: Buy`);
+	slack(`ETH:$${data.price}\nRecommendation: Sell`);
 	}
 }
 
@@ -27,7 +27,7 @@ let twenty_four = function(err, response, data) {
 	if (data.last <= program.low) {
 	slack(`ETH:$${data.last}\nRecommendation: Buy`);
 	} else if (data.last >= program.low) {
-	slack(`ETH:$${data.last}\nRecommendation: Buy`);
+	slack(`ETH:$${data.last}\nRecommendation: Sell`);
 	}
 }
 
