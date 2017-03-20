@@ -1,12 +1,12 @@
 const Gdax = require('gdax');
 const slack = require('./slack');
 const program = require('commander');
-const publicClient = new Gdax.PublicClient('ETH-USD');
+const publicClient = new Gdax.PublicClient('ETH-USD');		// public API might cap at 100 requests/day
 
 program
 	.version('0.0.1')
 	.usage('-c [ceiling] -f [floor]')
-	.description('Description: Simple CLI for setting alerts on price changes for cryptocurrencies on GDAX')
+	.description('Description: Simple CLI for setting slack alerts for ether price on GDAX')
 	.option('-c, --ceiling [ceiling]', 'Input high alert')
 	.option('-f, --floor [floor]', 'Input low alert')
 program.parse(process.argv);
