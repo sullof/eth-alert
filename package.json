@@ -1,0 +1,23 @@
+{
+  "name": "eth_alert",
+  "version": "1.0.0",
+  "description": "Provides slack alerts on Ether trading price (GDAX)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "eth_alert"
+  },
+  "keywords": [
+    "ethereum",
+    "cryptocurrency"
+  ],
+  "author": "waymobetta",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "gdax": "^0.3.1"
+  }
+}
