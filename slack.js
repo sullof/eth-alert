@@ -1,20 +1,20 @@
 // slack webhook
 
+const config = require('config.json');
 const request = require('request');
 
 function slack(payload) {
 	let body = {
 		'username': 'gdax_bot',
-		'user_id': '',					// fill in
 		'icon_emoji': ':robot_face:',
 		'response_type': 'in_channel',
-		'channel_name': '',			// fill in
+		'channel_name': '@jon',			// replace
 		'text': payload
 	}
 
 	const options = {
 		method: 'POST',
-		url: 'https://hooks.slack.com/services/xxxx/xxxx/xxxx',			// fill in
+		url: config['SLACK_URL'],
 		headers: {
 			'content-type': 'application/json'
 		},
@@ -32,4 +32,3 @@ function slack(payload) {
 };
 
 module.exports = slack;
-
